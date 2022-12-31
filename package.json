@@ -1,6 +1,6 @@
 {
   "name": "@markgarrigan/router",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Because I need a router to exactly what I want it to do.",
   "main": "index.js",
   "type": "module",
