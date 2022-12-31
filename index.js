@@ -72,9 +72,10 @@ const Router = {
 addEventListener('click', function (event) {
   const { target } = event
   if (target.tagName === 'A') {
-    const { href } = target
+    const { href, dataset } = target
     const { origin, pathname, hash, search } = new URL(href)
     if (origin !== location.origin) return
+    if (dataset.router && dataset.router.toLowerCase() === 'ignore') return
     if (href.match(/^mailto:/)) return
     if (href.match(/^tel:/)) return
     if (href.match(/^javascript:/)) return
